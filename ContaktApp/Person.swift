@@ -29,12 +29,9 @@ struct Person{
                  "yalta87@gmail.com", "blue69@gmail.com"]
         
     
-    
-    
     var title: String{
         "\(String(_: firstName.randomElement() ?? "1"))  \(String(_: lastName.randomElement() ?? "1"))"
     }
-    
 
     static func getPersonList() -> [Person]
     {
@@ -47,8 +44,7 @@ struct Person{
       Person(),
       Person(),
       Person(),
-      Person()
-      
+      Person()      
     ]
    }
  

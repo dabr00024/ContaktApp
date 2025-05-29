@@ -14,9 +14,8 @@ class PersonsListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()            
         tableView.rowHeight = 100
-        navigationItem.leftBarButtonItem = editButtonItem
         tableView.backgroundColor = .cyan
-        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
     }
     

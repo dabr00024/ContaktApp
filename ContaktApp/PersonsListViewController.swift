@@ -29,18 +29,21 @@ class PersonsListViewController: UITableViewController {
                 var content = cell.defaultContentConfiguration()
                 let person = personList[indexPath.row]
        
-        content.text = person.lastName.randomElement()
-        content.secondaryText = person.firstName.randomElement()
-        content.image = UIImage(named: person.numberImage.randomElement() ?? "1")
-        content.imageProperties.cornerRadius = tableView.rowHeight / 2
+        content.text = person.lastName
+        content.secondaryText = person.firstName
+        content.image = UIImage(named: person.numberImage)
+                content.imageProperties.cornerRadius = tableView.rowHeight / 2
         cell.contentConfiguration = content
+        
         
         return cell
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         let detailsVC = segue.destination as? PersonDetailsViewController
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         detailsVC?.person = personList[indexPath.row]
+        
     }
        
     }

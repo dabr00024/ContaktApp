@@ -14,18 +14,20 @@ class PersonDetailsViewController: UIViewController {
     @IBOutlet var phoneLabels: UILabel!
     @IBOutlet var emailLabels: UILabel!
     
+   
     
     
     var person: Person!
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad(){
         super.viewDidLoad()
-        avatarImageView.image = UIImage(named: person.numberImage.randomElement() ?? "1")
+        avatarImageView.image = UIImage(named: person.numberImage)
+        
         nameLabels.text = person.title
-        phoneLabels.text = person.numberPhone.randomElement()
-        emailLabels.text = person.email.randomElement()
-       
+        phoneLabels.text = person.numberPhone
+        emailLabels.text = person.email
+        
     }
     
 
